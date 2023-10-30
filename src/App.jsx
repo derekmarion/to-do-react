@@ -12,10 +12,17 @@ function App() {
     tasks.push(item);
     console.log(tasks);
     let list_item = document.createElement("li");
+    let label = document.createElement("label")
+    let checkbox = document.createElement("input")
+    checkbox.type = "checkbox"
     let output = document.getElementById("output");
     tasks.map((task) => {
-      list_item.innerText = task;
       output.appendChild(list_item);
+      list_item.id = task
+      list_item.appendChild(checkbox)
+      label.for = task
+      label.innerText = task
+      list_item.appendChild(label)
     })
   };
 

@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Style for the crossed-out text */
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #999; /* Optional: Change color for crossed-out items */
+}
