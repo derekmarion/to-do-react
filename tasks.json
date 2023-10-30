@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "description": "Buy groceries",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "description": "Finish assignment",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "description": "Exercise",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "description": "Read a book",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "description": "Call a friend",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "description": "Clean the house",
+      "completed": false
+    },
+    {
+      "id": 7,
+      "description": "Learn React",
+      "completed": false
+    },
+    {
+      "id": 8,
+      "description": "Plan a trip",
+      "completed": true
+    },
+    {
+      "id": 9,
+      "description": "Cook dinner",
+      "completed": false
+    },
+    {
+      "id": 10,
+      "description": "Write a report",
+      "completed": true
+    },
+    {
+      "id": 11,
+      "description": "Walk the dog",
+      "completed": false
+    },
+    {
+      "id": 12,
+      "description": "Create a presentation",
+      "completed": false
+    },
+    {
+      "id": 13,
+      "description": "Visit the museum",
+      "completed": true
+    },
+    {
+      "id": 14,
+      "description": "Fix the bicycle",
+      "completed": false
+    },
+    {
+      "id": 15,
+      "description": "Watch a movie",
+      "completed": false
+    }
+  ]
+  
