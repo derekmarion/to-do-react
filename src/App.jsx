@@ -13,7 +13,10 @@ function App() {
     console.log(tasks);
     let list_item = document.createElement("li");
     let output = document.getElementById("output");
-    output.appendChild(list_item);
+    tasks.map((task) => {
+      list_item.innerText = task;
+      output.appendChild(list_item);
+    })
   };
 
   return (
