@@ -1,43 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useState } from 'react';
 
 function App() {
-  let tasks = [];
-  
+  const [tasks, setTasks] = useState([]);
+
   const addTask = (e) => {
     e.preventDefault();
-    let item = document.getElementById("item").value;
-    tasks.push(item);
-    console.log(tasks);
-    let list_item = document.createElement("li");
-    let label = document.createElement("label")
-    let checkbox = document.createElement("input")
-    checkbox.type = "checkbox"
-    let output = document.getElementById("output");
-    tasks.map((task) => {
-      output.appendChild(list_item);
-      list_item.id = task
-      list_item.appendChild(checkbox)
-      label.for = task
-      label.innerText = task
-      list_item.appendChild(label)
-    })
+    const item = document.getElementById("item").value;
+    setTasks([...tasks, item]);
+  };
+
+  const deleteTask = (taskId) => {
+    const updatedTasks = tasks.filter((task) => task !== taskId);
+    setTasks(updatedTasks);
   };
 
   return (
     <>
-
       <h1>My To-Do List</h1>
       <form onSubmit={(e) => addTask(e)}>
-        <input type="text" id="item"/>
-          <button type="submit">Add Task</button>
+        <input type="text" id="item" />
+        <button type="submit">Add Task</button>
       </form>
       <ul id="output">
+        {tasks.map((task) => (
+          <li key={task} id={task}>
+            <input type="checkbox" />
+            <label htmlFor={task}>{task}</label>
+            <form
+              onClick={(e) => {
+                e.preventDefault();
+                deleteTask(task);
+              }}
+            >
+              <button type="submit">delete</button>
+            </form>
+          </li>
+        ))}
       </ul>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
